@@ -1,0 +1,692 @@
+{
+    "color": "orange",
+    "name": "Neutron",
+    "score": 40,
+    "children": [
+        {
+            "color": "orange",
+            "name": "neutron-server",
+            "score": 40,
+            "children": [
+                {
+                    "color": "orange",
+                    "name": "amq_server_inst_1",
+                    "score": 40,
+                    "children": [
+                        {
+                            "color": "orange",
+                            "metric": "QLEN",
+                            "score": 40,
+                            "code": "K52",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "L3_AGENT_QLENGTH",
+                            "score": 100,
+                            "code": "K72",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "DHCP_AGENT_QLENGTH",
+                            "score": 100,
+                            "code": "K73",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "METADATA_AGENTN_QLENGTH",
+                            "score": 100,
+                            "code": "K75",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "DSNMASQ_AGENT_QLENGTH",
+                            "score": 100,
+                            "code": "K76",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "NEUTRON_SERVER_QLEN",
+                            "score": 100,
+                            "code": "K77",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "E2",
+                    "shape": "rect",
+                    "type": "entity"
+                },
+                {
+                    "color": "green",
+                    "name": "mysql_server_inst_1",
+                    "score": 100,
+                    "children": [
+                        {
+                            "color": "green",
+                            "metric": "UTILIZATION",
+                            "score": 100,
+                            "code": "K53",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "E3",
+                    "shape": "rect",
+                    "type": "entity"
+                },
+                {
+                    "color": "green",
+                    "name": "n42-poweredge-5-n42-poweredge-5",
+                    "score": 100,
+                    "children": [],
+                    "code": "C1",
+                    "shape": "rect",
+                    "type": "connection"
+                },
+                {
+                    "color": "green",
+                    "name": "egde_1",
+                    "score": 100,
+                    "children": [
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_wait_io",
+                            "score": 100,
+                            "code": "K1",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "num_unint_processes ",
+                            "score": 100,
+                            "code": "K4",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "disk_block_in_out",
+                            "score": 100,
+                            "code": "K7",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_compute",
+                            "score": 100,
+                            "code": "K10",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "load_avg_compute",
+                            "score": 100,
+                            "code": "K13",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "buffer_cach_free_mem",
+                            "score": 100,
+                            "code": "K16",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "swap_in_swap_out",
+                            "score": 100,
+                            "code": "K19",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "E13",
+                    "shape": "rect",
+                    "type": "entity"
+                },
+                {
+                    "color": "green",
+                    "metric": "NUMBER_REQ_NEUTRON",
+                    "score": 100,
+                    "code": "K70",
+                    "shape": "rect",
+                    "type": "kpi"
+                },
+                {
+                    "color": "green",
+                    "metric": "AVG_RESP_TIME_NEUTRON",
+                    "score": 100,
+                    "code": "K71",
+                    "shape": "rect",
+                    "type": "kpi"
+                },
+                {
+                    "color": "green",
+                    "name": "n42-poweredge-5-n42-poweredge-5",
+                    "score": 100,
+                    "children": [
+                        {
+                            "color": "green",
+                            "metric": "RTT",
+                            "score": 100,
+                            "code": "K24",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "JITTER",
+                            "score": 100,
+                            "code": "K25",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "C2",
+                    "shape": "rect",
+                    "type": "connection"
+                }
+            ],
+            "code": "E1",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "orange",
+            "name": "l3_agent_inst_1",
+            "score": 40,
+            "children": [
+                {
+                    "color": "green",
+                    "metric": "L3_AGENT_AVAILABILITY\n",
+                    "score": 100,
+                    "code": "K80",
+                    "shape": "rect",
+                    "type": "kpi"
+                },
+                {
+                    "color": "orange",
+                    "name": "n42-poweredge-5-n42-poweredge-5",
+                    "score": 40,
+                    "children": [
+                        {
+                            "color": "orange",
+                            "name": "edge1_edge5_MGMT",
+                            "score": 40,
+                            "children": [
+                                {
+                                    "color": "orange",
+                                    "name": "egde1_mgmt_if",
+                                    "score": 40,
+                                    "children": [
+                                        {
+                                            "color": "green",
+                                            "metric": "DROP",
+                                            "score": 100,
+                                            "code": "K50",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        },
+                                        {
+                                            "color": "green",
+                                            "metric": "TXRX_ERROR",
+                                            "score": 100,
+                                            "code": "K51",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        },
+                                        {
+                                            "color": "orange",
+                                            "metric": "QLEN",
+                                            "score": 40,
+                                            "code": "K52",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        },
+                                        {
+                                            "color": "green",
+                                            "metric": "UTILIZATION",
+                                            "score": 100,
+                                            "code": "K53",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        }
+                                    ],
+                                    "code": "E16",
+                                    "shape": "rect",
+                                    "type": "entity"
+                                },
+                                {
+                                    "color": "green",
+                                    "name": "egde5_mgmt_if",
+                                    "score": 100,
+                                    "children": [
+                                        {
+                                            "color": "green",
+                                            "metric": "DROP",
+                                            "score": 100,
+                                            "code": "K66",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        },
+                                        {
+                                            "color": "green",
+                                            "metric": "TXRX_ERROR",
+                                            "score": 100,
+                                            "code": "K67",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        },
+                                        {
+                                            "color": "green",
+                                            "metric": "QLEN",
+                                            "score": 100,
+                                            "code": "K68",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        },
+                                        {
+                                            "color": "green",
+                                            "metric": "UTILIZATION",
+                                            "score": 100,
+                                            "code": "K69",
+                                            "shape": "rect",
+                                            "type": "kpi"
+                                        }
+                                    ],
+                                    "code": "E20",
+                                    "shape": "rect",
+                                    "type": "entity"
+                                },
+                                {
+                                    "color": "green",
+                                    "name": "L2_SWITCH_mgmt_inst1",
+                                    "score": 100,
+                                    "children": [],
+                                    "code": "E22",
+                                    "shape": "rect",
+                                    "type": "entity"
+                                }
+                            ],
+                            "code": "P2",
+                            "shape": "rect",
+                            "type": "path"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "RTT",
+                            "score": 100,
+                            "code": "K26",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "JITTER",
+                            "score": 100,
+                            "code": "K27",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "C3",
+                    "shape": "rect",
+                    "type": "connection"
+                }
+            ],
+            "code": "E4",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "DHCP_agent_inst1",
+            "score": 100,
+            "children": [
+                {
+                    "color": "green",
+                    "metric": "NEUTRON_DHCP_AGENT_AVAILABILITY",
+                    "score": 100,
+                    "code": "K81",
+                    "shape": "rect",
+                    "type": "kpi"
+                },
+                {
+                    "color": "green",
+                    "name": "n42-poweredge-5-n42-poweredge-5",
+                    "score": 100,
+                    "children": [
+                        {
+                            "color": "green",
+                            "metric": "RTT",
+                            "score": 100,
+                            "code": "K28",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "JITTER",
+                            "score": 100,
+                            "code": "K29",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "C4",
+                    "shape": "rect",
+                    "type": "connection"
+                }
+            ],
+            "code": "E5",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "METADATA_agent_inst1",
+            "score": 100,
+            "children": [],
+            "code": "E6",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "METADATA_PROXY_INST1",
+            "score": 100,
+            "children": [],
+            "code": "E7",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "NetronAPIServer",
+            "score": 100,
+            "children": [],
+            "code": "E8",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "VSWITCHAgent_inst1",
+            "score": 100,
+            "children": [
+                {
+                    "color": "green",
+                    "name": "egde_1",
+                    "score": 100,
+                    "children": [
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_wait_io",
+                            "score": 100,
+                            "code": "K1",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "num_unint_processes ",
+                            "score": 100,
+                            "code": "K4",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "disk_block_in_out",
+                            "score": 100,
+                            "code": "K7",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_compute",
+                            "score": 100,
+                            "code": "K10",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "load_avg_compute",
+                            "score": 100,
+                            "code": "K13",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "buffer_cach_free_mem",
+                            "score": 100,
+                            "code": "K16",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "swap_in_swap_out",
+                            "score": 100,
+                            "code": "K19",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "E13",
+                    "shape": "rect",
+                    "type": "entity"
+                },
+                {
+                    "color": "green",
+                    "metric": "OVS_AVAILABILITY",
+                    "score": 100,
+                    "code": "K82",
+                    "shape": "rect",
+                    "type": "kpi"
+                }
+            ],
+            "code": "E9",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "VSWITCHAgent_inst2",
+            "score": 100,
+            "children": [
+                {
+                    "color": "green",
+                    "name": "edge_3",
+                    "score": 100,
+                    "children": [
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_wait_io",
+                            "score": 100,
+                            "code": "K2",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "num_unint_processes ",
+                            "score": 100,
+                            "code": "K5",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "disk_block_in_out",
+                            "score": 100,
+                            "code": "K8",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_compute",
+                            "score": 100,
+                            "code": "K11",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "load_avg_compute",
+                            "score": 100,
+                            "code": "K14",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "buffer_cach_free_mem",
+                            "score": 100,
+                            "code": "K17",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "swap_in_swap_out",
+                            "score": 100,
+                            "code": "K20",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "E14",
+                    "shape": "rect",
+                    "type": "entity"
+                },
+                {
+                    "color": "green",
+                    "metric": "OVS_AVAILABILITY",
+                    "score": 100,
+                    "code": "K83",
+                    "shape": "rect",
+                    "type": "kpi"
+                }
+            ],
+            "code": "E10",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "VSWITCHAgent_inst3",
+            "score": 100,
+            "children": [
+                {
+                    "color": "green",
+                    "name": "edge_5",
+                    "score": 100,
+                    "children": [
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_wait_io",
+                            "score": 100,
+                            "code": "K3",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "num_unint_processes ",
+                            "score": 100,
+                            "code": "K6",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "disk_block_in_out",
+                            "score": 100,
+                            "code": "K9",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "pc_cpu_compute",
+                            "score": 100,
+                            "code": "K12",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "load_avg_compute",
+                            "score": 100,
+                            "code": "K15",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "buffer_cach_free_mem",
+                            "score": 100,
+                            "code": "K18",
+                            "shape": "rect",
+                            "type": "kpi"
+                        },
+                        {
+                            "color": "green",
+                            "metric": "swap_in_swap_out",
+                            "score": 100,
+                            "code": "K21",
+                            "shape": "rect",
+                            "type": "kpi"
+                        }
+                    ],
+                    "code": "E15",
+                    "shape": "rect",
+                    "type": "entity"
+                },
+                {
+                    "color": "green",
+                    "metric": "OVS_AVAILABILITY",
+                    "score": 100,
+                    "code": "K84",
+                    "shape": "rect",
+                    "type": "kpi"
+                }
+            ],
+            "code": "E11",
+            "shape": "rect",
+            "type": "entity"
+        },
+        {
+            "color": "green",
+            "name": "dsnmasq_inst1",
+            "score": 100,
+            "children": [],
+            "code": "E12",
+            "shape": "rect",
+            "type": "entity"
+        }
+    ],
+    "code": "E0",
+    "shape": "rect",
+    "type": null
+}

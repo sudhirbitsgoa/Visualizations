@@ -2,8 +2,8 @@
 
 How to see visualizations
 
-git clone
-cd Visualizations
-pythom -m SimpleHTTPServer 8000
+git clone \n
+cd Visualizations \n 
+python -m SimpleHTTPServer 8000 \n
 
 point your local browser to http://localhost:8000

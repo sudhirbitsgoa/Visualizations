@@ -126,7 +126,7 @@
   }
 
   .live.map .node g div {
-    width: 200px;
+    width: 250px;
     height: 40px;
     color: #fff;
   }
@@ -143,7 +143,7 @@
 
   .live.map .edgePath path {
     stroke: #999;
-    stroke-width: 1.5px;
+    stroke-width: 5px;
     fill: #999;
   }
 </style>
@@ -156,38 +156,62 @@
 <script>
 
   var workers = {
-    "identifier": {
-      "consumers": 2,
+    "reservoir": {
+      "consumers": 0,
       "count": 20
     },
-    "lost-and-found": {
+    "Storage Tank": {
       "consumers": 1,
       "count": 1,
-      "inputQueue": "identifier",
+      "inputQueue": ["reservoir"],
       "inputThroughput": 50
     },
-    "monitor": {
+    "Storage Tank 2": {
+      "consumers": 1,
+      "count": 1,
+      "inputQueue": ["reservoir"],
+      "inputThroughput": 50
+    },
+    "Water Treatment Plant": {
       "consumers": 1,
       "count": 0,
-      "inputQueue": "identifier",
+      "inputQueue": ["Storage Tank", "Storage Tank 2"],
       "inputThroughput": 50
     },
-    "meta-enricher": {
+    "Water Treatment Plant 2": {
       "consumers": 4,
       "count": 9900,
-      "inputQueue": "identifier",
+      "inputQueue": ["Storage Tank", "Storage Tank 2"],
       "inputThroughput": 50
     },
-    "geo-enricher": {
+    "Elevated Storage Tank": {
       "consumers": 2,
       "count": 1,
-      "inputQueue": "meta-enricher",
+      "inputQueue": ["Water Treatment Plant 2"],
       "inputThroughput": 50
     },
-    "elasticsearch-writer": {
+    "Elevated Storage Tank 2": {
       "consumers": 0,
       "count": 9900,
-      "inputQueue": "geo-enricher",
+      "inputQueue": ["Water Treatment Plant"],
+      "inputThroughput": 50
+    },
+    "Elevated Storage Tank 3": {
+      "consumers": 0,
+      "count": 9900,
+      "inputQueue": ["Water Treatment Plant 2"],
+      "inputThroughput": 50
+    },
+    "Elevated Storage Tank 4": {
+      "consumers": 0,
+      "count": 9900,
+      "inputQueue": ["Water Treatment Plant 2"],
+      "inputThroughput": 50
+    },
+    "Wards": {
+      "consumers": 0,
+      "count": 0,
+      "inputQueue": ["Elevated Storage Tank", "Elevated Storage Tank 2", "Elevated Storage Tank 3"],
       "inputThroughput": 50
     }
   };
@@ -236,9 +260,11 @@
       });
 
       if (worker.inputQueue) {
-        g.setEdge(worker.inputQueue, id, {
-          label: worker.inputThroughput + "/s",
-          width: 40
+        worker.inputQueue.forEach(function(element, indx) {
+          g.setEdge(element, id, {
+            label: worker.inputThroughput + " gallons/s",
+            width: 100
+          });
         });
       }
     }
@@ -260,26 +286,26 @@
 
   // Do some mock queue status updates
   setInterval(function() {
-    var stoppedWorker1Count = workers["elasticsearch-writer"].count;
-    var stoppedWorker2Count = workers["meta-enricher"].count;
+    var stoppedWorker1Count = workers["Elevated Storage Tank"].count;
+    var stoppedWorker2Count = workers["Water Treatment Plant 2"].count;
     for (var id in workers) {
       workers[id].count = Math.ceil(Math.random() * 3);
       if (workers[id].inputThroughput) workers[id].inputThroughput = Math.ceil(Math.random() * 250);
     }
-    workers["elasticsearch-writer"].count = stoppedWorker1Count + Math.ceil(Math.random() * 100);
-    workers["meta-enricher"].count = stoppedWorker2Count + Math.ceil(Math.random() * 100);
-    draw(true);
-  }, 1000);
+    workers["Elevated Storage Tank"].count = stoppedWorker1Count + Math.ceil(Math.random() * 100);
+    workers["Water Treatment Plant 2"].count = stoppedWorker2Count + Math.ceil(Math.random() * 100);
+    draw(false);
+  }, 5000);
 
   // Do a mock change of worker configuration
-  setInterval(function() {
-    workers["elasticsearch-monitor"] = {
-      "consumers": 0,
-      "count": 0,
-      "inputQueue": "elasticsearch-writer",
-      "inputThroughput": 50
-    }
-  }, 5000);
+  // setTimeout(function() {
+  //   workers["Wards"] = {
+  //     "consumers": 0,
+  //     "count": 0,
+  //     "inputQueue": ["Elevated Storage Tank"],
+  //     "inputThroughput": 50
+  //   }
+  // }, 5000);
 
   draw();
 </script>
